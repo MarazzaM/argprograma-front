@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.getUsers(true);
 
     const options = {
-      strings: ['Developer.', 'Freelancer.','RPA Developer', 'Student'],
+      strings: ['Developer.', 'Freelancer.','RPA Developer', 'Estudiante'],
       typeSpeed: 100,
       backSpeed: 100,
       showCursor: true,
