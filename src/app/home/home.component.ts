@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { FileUploadStatus } from '../model/file-upload.status';
 import { Role } from '../enum/role.enum';
 import Typed from 'typed.js';
-import AOS from 'aos';
+import * as AOS from 'aos';
 import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 import Isotope from 'isotope-layout';
@@ -249,14 +249,12 @@ new Swiper('.testimonials-slider', {
 /**
  * Animation on scroll
  */
-window.addEventListener('load', () => {
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
     once: true,
     mirror: false
   })
-});
     /**
      * Portfolio isotope and filter
      */
