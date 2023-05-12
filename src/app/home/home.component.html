@@ -23,6 +23,7 @@
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre Mí</span></a></li>
+        <li><a href="#confidential" class="nav-link scrollto"><i class="bx bx-lock"></i> <span>Confidencial</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Servicios</span></a></li>
@@ -103,6 +104,19 @@
      </div>
    </section><!-- End About Section -->
 
+   <section id="confidential" class="confidential">
+ <div class="banner"  *ngIf="!user">
+  <div class="overlay"></div>
+  <div class="banner-content">
+    <h1>Esta área es confidencial</h1>
+    <p>Por favor, hace el login para acceder</p>
+    <button class="btn btn-primary" routerLink="/login">Login</button>
+  </div>
+</div>
+
+<app-list *ngIf="user"></app-list>
+
+</section>
    <!-- ======= Facts Section ======= -->
    <section id="facts" class="facts">
      <div class="container">
@@ -290,6 +304,7 @@
          <h2>Portfolio</h2>
          <p>Acá vas a poder encontrar algunos de mis proyectos que realicé mientras empezaba a aprender tecnologías web.</p>
          <p><b>Apreta en una categoría para comenzar</b></p>
+         <p>Luego podrás hacer pasar el mouse por las imágenes para ir al sitio</p>
        </div>
 
        <div class="row" data-aos="fade-up">
@@ -318,7 +333,7 @@
           <div class="portfolio-wrap">
             <img src="../../assets/images/portfolio/11.png" class="img-fluid" alt="">
             <div class="portfolio-links">
-              <a href="https://project-hcamvrfqi-marazzam.vercel.app" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="https://project-hcamvrfqi-marazzam.vercel.app" target="_blank"  title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
         </div>
@@ -345,7 +360,7 @@
            <div class="portfolio-wrap">
              <img src="../../assets/images/portfolio/2.png" class="img-fluid" alt="">
              <div class="portfolio-links">
-               <a href="https://adventure-tau.vercel.app" title="More Details"><i class="bx bx-link"></i></a>
+               <a href="https://adventure-tau.vercel.app" target="_blank"  title="More Details"><i class="bx bx-link"></i></a>
              </div>
            </div>
          </div>
@@ -354,7 +369,7 @@
            <div class="portfolio-wrap">
              <img src="../../assets/images/portfolio/8.png" class="img-fluid" alt="">
              <div class="portfolio-links">
-               <a href="https://kitty-witty.web.app" title="More Details"><i class="bx bx-link"></i></a>
+               <a href="https://kitty-witty.web.app" target="_blank"  title="More Details"><i class="bx bx-link"></i></a>
              </div>
            </div>
          </div>
@@ -372,7 +387,7 @@
            <div class="portfolio-wrap">
              <img src="../../assets/images/portfolio/4.png" class="img-fluid" alt="">
              <div class="portfolio-links">
-               <a href="https://basic-template-xi.vercel.app" title="More Details"><i class="bx bx-link"></i></a>
+               <a href="https://basic-template-xi.vercel.app" target="_blank"  title="More Details"><i class="bx bx-link"></i></a>
              </div>
            </div>
          </div>
@@ -382,7 +397,7 @@
            <div class="portfolio-wrap">
              <img src="../../assets/images/portfolio/9.png" class="img-fluid" alt="">
              <div class="portfolio-links">
-               <a href="https://takabrom-tattoo.web.app" title="More Details"><i class="bx bx-link"></i></a>
+               <a href="https://takabrom-tattoo.web.app" target="_blank"  title="More Details"><i class="bx bx-link"></i></a>
              </div>
            </div>
          </div>
@@ -423,7 +438,7 @@
            <p class="description">Proporciono servicios de pruebas automáticas para empresas que buscan mejorar la calidad y fiabilidad de sus aplicaciones y reducir los costos y tiempos de prueba.</p>
          </div>
          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-           <div class="icon"><i class="bx bxl -audible"></i></div>
+           <div class="icon"><i class="bx bxl-audible"></i></div>
            <h4 class="title"><p>Desarrollo de infrastructura</p></h4>
            <p class="description">Ofrezco soluciones de infraestructura de TI personalizadas para empresas que buscan mejorar la eficiencia y la seguridad de su infraestructura de TI.</p>
          </div>
@@ -525,6 +540,8 @@
        <div class="section-title">
          <h2>Contacto</h2>
          <p>Podemos ponernos en contacto para trabajar juntos y hacer el futuro uno mejor.</p>
+         <b>Por el momento Google desactivó "less secure app" passwords, así que el formulario de contacto ha sido desactivado
+         </b>
        </div>
 
        <div class="row" data-aos="fade-in">
@@ -592,4 +609,5 @@
 
 
  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bxs-up-arrow' ></i></a>
+ 
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
